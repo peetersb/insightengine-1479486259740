@@ -37,6 +37,9 @@ var personalityInsights = watson.personality_insights({
 
 app.get('/', function(req, res) {
   res.render('index', { ct: req._csrfToken });
+  res.header('Access-Control-Allow-Origin', 'example.com');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
 });
 
 app.post('/api/profile', function(req, res, next) {
