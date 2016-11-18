@@ -18,6 +18,10 @@
 'use strict';
 
 $(document).ready(function() {
+	
+	$.get("https://sni-problem-three.mybluemix.net/demo",function (data){
+		$("#resultbox").html(data);
+	});
 
   var demo = {
     getTooltip : undefined // Loaded later
